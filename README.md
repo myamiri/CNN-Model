@@ -38,6 +38,7 @@ Data Description
 Create the Convolutional Neural Networks (CNN)
 
 Define model
+
 The first layer in model network, keras.layers.Flatten, transforms the format of the images from a two-dimensional array (of 28 by 28 pixels) to a one-dimensional array (of 28 * 28 = 784 pixels). 
 This layer unstacks rows of pixels in the image and lining them up and has no parameters to learn; it only reformats the data.
 After the pixels are flattened, the network consists of a sequence of two keras.layers.Dense layers. These are densely connected, or fully connected, neural layers. 
@@ -45,7 +46,8 @@ The first Dense layer has 32 nodes (or neurons). The second (and last) layer is 
 Each node contains a score that indicates the probability that the current image belongs to one of the 10 classes.
 
 Compile model
-Before the model is ready for training, it needs a few more settings. These are added during the model's compile step:
+
+Before the model is ready for training, it needs a few more settings. These are added during the model's compile step :
 1) Loss function —This measures how accurate the model is during training. You want to minimize this function to "steer" the model in the right direction.
 Here we will use "sparse_categorical_crossentropy"
 2) Optimizer —This is how the model is updated based on the data it sees and its loss function.
