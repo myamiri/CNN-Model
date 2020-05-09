@@ -2,7 +2,7 @@
 
 # Summary
 
-This notebook trains a Convulotional Neural Network model to classify images of clothing, like sneakers and shirts. 
+This notebook trains a Convolutional Neural Network model to classify images of clothing, like sneakers and shirts. 
 This notebook uses tf.keras, a high-level API to build and train models in TensorFlow.
 
 
@@ -16,7 +16,7 @@ We need a better way to deal with high dimensional data so that we can quickly e
 
 # Solution
 
-For Dealing with this problem, one of the best method is convulotional Neural Network that will reduce the number of features using filter, Max pooling, stride and etc.
+For Dealing with this problem, one of the best method is convolutional Neural Network that will reduce the number of features using filter, max pooling, stride and etc.
 
 
 # Data
