@@ -27,38 +27,45 @@ Zalando intends Fashion-MNIST to serve as a direct drop-in replacement for the o
 
 Data Description
 
-1) Each image is 28 pixels in height and 28 pixels in width, for a total of 784 pixels in total.
-2) Each pixel has a single pixel-value associated with it, indicating the lightness or darkness of that pixel, with higher numbers meaning darker. This pixel-value is an integer between 0 and 255.
-3) The training and test data sets have 785 columns.
-4) The first column consists of the class labels (see above), and represents the article of clothing.
-5) The rest of the columns contain the pixel-values of the associated image.
+- Each image is 28 pixels in height and 28 pixels in width, for a total of 784 pixels in total.
+- Each pixel has a single pixel-value associated with it, indicating the lightness or darkness of that pixel, with higher numbers
+  meaning darker. This pixel-value is an integer between 0 and 255.
+- The training and test data sets have 785 columns.
+- The first column consists of the class labels (see above), and represents the article of clothing.
+- The rest of the columns contain the pixel-values of the associated image.
 
 # Modeling
 
-Create the Convolutional Neural Networks (CNN)
+Create the Convolutional Neural Networks (CNN) with these steps:
 
-Define model
+1- Define model
 
-The first layer in model network, keras.layers.Flatten, transforms the format of the images from a two-dimensional array (of 28 by 28 pixels) to a one-dimensional array (of 28 * 28 = 784 pixels). 
-This layer unstacks rows of pixels in the image and lining them up and has no parameters to learn; it only reformats the data.
-After the pixels are flattened, the network consists of a sequence of two keras.layers.Dense layers. These are densely connected, or fully connected, neural layers. 
-The first Dense layer has 32 nodes (or neurons). The second (and last) layer is a 10-node softmax layer that returns an array of 10 probability scores that sum to 1. 
-Each node contains a score that indicates the probability that the current image belongs to one of the 10 classes.
+ The first layer in model network, keras.layers.Flatten, transforms the format of the images from a two-dimensional array (of 28 by 28
+ pixels) to a one-dimensional array (of 28 * 28 = 784 pixels). 
+ This layer unstacks rows of pixels in the image and lining them up and has no parameters to learn; it only reformats the data.
+ After the pixels are flattened, the network consists of a sequence of two keras.layers.Dense layers. These are densely connected, or
+ fully connected, neural layers.
+ The first Dense layer has 32 nodes (or neurons). The second (and last) layer is a 10-node softmax layer that returns an array of 10
+ probability scores that sum to 1.
+ Each node contains a score that indicates the probability that the current image belongs to one of the 10 classes.
 
-Compile model
+2- Compile model
 
-Before the model is ready for training, it needs a few more settings. These are added during the model's compile step :
-1) Loss function —This measures how accurate the model is during training. You want to minimize this function to "steer" the model in the right direction.
-Here we will use "sparse_categorical_crossentropy"
-2) Optimizer —This is how the model is updated based on the data it sees and its loss function.
-3) Metrics —Used to monitor the training and testing steps. The following example uses accuracy, the fraction of the images that are correctly classified.
+ Before the model is ready for training, it needs a few more settings. These are added during the model's compile step :
+   - Loss function —This measures how accurate the model is during training. You want to minimize this function to "steer" the model in
+     the right direction. Here we will use "sparse_categorical_crossentropy"
 
-Train model
+   - Optimizer —This is how the model is updated based on the data it sees and its loss function.
+   - Metrics —Used to monitor the training and testing steps. The following example uses accuracy, the fraction of the images that are
+     correctly classified.
 
-Training the neural network model requires the following steps:
-1) Feed the training data to the model. In this example, the training data is in the x_train and y_train arrays.
-2) The model learns to associate images and labels.
-3) You ask the model to make predictions about a test set—in this example, the x_test array. Verify that the predictions match the labels from the y_test array.
+3- Train model
+
+ Training the neural network model requires the following steps:
+  - Feed the training data to the model. In this example, the training data is in the x_train and y_train arrays.
+  - The model learns to associate images and labels.
+  - You ask the model to make predictions about a test set—in this example, the x_test array. Verify that the predictions match the
+    labels from the y_test array.
 
 
 # Results
