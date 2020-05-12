@@ -70,11 +70,11 @@ Before the model is ready for training, it needs a few more settings. I added th
 
    Training the neural network model requires the following steps:
     
-  - Feed the training data to the model. In this example, the training data is in the x_train and y_train 
-    arrays. 
-  - The model learns to associate images and labels.
-  - You ask the model to make predictions about a test set—in this example, the x_test array. Verify that 
-    the predictions match the labels from the y_test array.
+    - Feed the training data to the model. In this example, the training data is in the x_train and y_train 
+      arrays. 
+    - The model learns to associate images and labels.
+    - You ask the model to make predictions about a test set—in this example, the x_test array. Verify that 
+      the predictions match the labels from the y_test array.
 
 
 
