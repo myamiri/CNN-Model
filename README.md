@@ -51,14 +51,17 @@ Each node contains a score that shows the probability that the current image bel
 
 Before the model is ready for training, it needs a few more settings. I added these during the model’s compile step:
 
-Loss function : 
+- Loss function : 
+
        This measures how accurate the model is during training. You want to minimize this function, to
        “steer” the model  in the right direction. Here we will use “sparse_categorical_crossentropy”  
 
-Optimizer :
+- Optimizer :
+
        This is how we can update the model by optimizer based on the data it sees and its loss function.
 
-Metrics :
+- Metrics :
+
       Used to monitor the training and testing steps. The following example uses accuracy, the fraction of  
       the images that model can classify correctly.
 
