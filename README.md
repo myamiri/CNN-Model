@@ -69,7 +69,6 @@ Before the model is ready for training, it needs a few more settings. I added th
 3- Train model
 
    Training the neural network model requires the following steps:
-    
     - Feed the training data to the model. In this example, the training data is in the x_train and y_train 
       arrays. 
     - The model learns to associate images and labels.
