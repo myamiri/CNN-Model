@@ -42,22 +42,18 @@ Create Convolutional Neural Networks (CNN) with these steps:
 
    The first layer in the model network, Keras.layers.Flatten, transforms the format of the images from a two-dimensional array (of 28
     by 28 pixels) to a one-dimensional array (of 28 * 28 = 784 pixels).
-   
-   This layer unstacks rows of pixels in the image and lining them up and has no parameters to learn; it only reformats the data.
-   
-   After flatting the pixels, the network comprises a sequence of two Keras layers.Dense layers. These are fully-connected neural
+    This layer unstacks rows of pixels in the image and lining them up and has no parameters to learn; it only reformats the data.
+    After flatting the pixels, the network comprises a sequence of two Keras layers.Dense layers. These are fully-connected neural
     layers.
-   
-   The first Dense layer has 32 nodes (or neurons). The second (and last) layer is a 10-node Softmax layer that returns an array of 
+    The first Dense layer has 32 nodes (or neurons). The second (and last) layer is a 10-node Softmax layer that returns an array of 
     10 probability scores that sum to 1.
-   
-   Each node contains a score that shows the probability that the current image belongs to one of the 10 classes.
+    Each node contains a score that shows the probability that the current image belongs to one of the 10 classes.
 
 2- Compile model
 
    Before the model is ready for training, it needs a few more settings. I added these during the model’s compile step :
  
-    - Loss function 
+    - Loss function 
    
       This measures how accurate the model is during training. You want to minimize this function, to “steer” the model 
       in the right direction. Here we will use “sparse_categorical_crossentropy”
