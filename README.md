@@ -101,3 +101,5 @@ A subset of incorrectly predicted classes
 
 
 It looks like the diversity of similar patterns present in multiple classes affects the performance of the classifier, although CNN is a robust architect.
+
+
